@@ -103,3 +103,15 @@ resource "aws_route_table_association" "private_route_association2" {
   subnet_id = aws_subnet.private_subnet2.id
   route_table_id = aws_route_table.private-rt.id
 }
+
+module "sgs" {
+  source = "./eks-sg"
+  vpc_id = aws_vpc.acme_vpc.id
+}
+
+module "eks" {
+  source = "./eks"
+  vpc_id = aws_vpc.acme_vpc.id
+  subnet_ids = [aws_subnet.public_subnet1.id, aws_subnet.public_subnet2.id]
+  sg_ids = module.sgs.security_group_public
+}
