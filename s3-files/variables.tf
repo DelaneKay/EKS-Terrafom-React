@@ -5,3 +5,7 @@ variable "bucket_name" {
 variable "dynamodb_name" {
   default = "kubernetes-terraform-locking"
 }
+
+variable "region" {
+  default = "us-east-1"
+}
