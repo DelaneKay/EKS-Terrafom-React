@@ -21,7 +21,7 @@ data "aws_key_pair" "existing_key_pair" {
 resource "aws_instance" "bastion" {
   ami = data.aws_ami.ubuntu.id
   key_name = data.aws_key_pair.existing_key_pair.key_name
-  instance_type = var.instance_type
+  instance_type = "t2.micro"
   associate_public_ip_address = true
   subnet_id = aws_subnet.public_subnet1.id
   vpc_security_group_ids = [ aws_security_group.acme_sg.id ]
