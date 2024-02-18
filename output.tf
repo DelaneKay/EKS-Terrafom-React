@@ -17,3 +17,7 @@ output "public_subnet_ids" {
 output "security_group_id" {
   value = aws_security_group.acme_sg.id
 }
+
+output "ubuntu_ami" {
+  value = data.aws_ami.ubuntu
+}
