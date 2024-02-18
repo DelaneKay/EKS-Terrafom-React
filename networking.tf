@@ -83,7 +83,7 @@ resource "aws_eip" "eip_nat" {
 
 resource "aws_nat_gateway" "natgw" {
   allocation_id = aws_eip.eip_nat.id
-  subnet_id = aws_subnet.public_subnet2
+  subnet_id = aws_subnet.public_subnet2.id
 }
 
 resource "aws_route_table" "private-rt" {
