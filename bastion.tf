@@ -2,17 +2,18 @@ data "aws_ami" "ubuntu" {
   most_recent = true
 
   filter {
-    name = "name"
-    values = [ "ubuntu/images/hvm-ssd/ubuntu-focal-22.04-amd64-server-*" ]
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-22.04-amd64-server-*"]
   }
 
   filter {
-    name = "virtualization-type"
-    values = [ "hvm" ]
+    name   = "virtualization-type"
+    values = ["hvm"]
   }
 
-  owners = [ "099720109477" ] # Canonical
+  owners = ["099720109477"]  # Canonical
 }
+
 
 data "aws_key_pair" "existing_key_pair" {
   key_name = "AWSDevOPs"
