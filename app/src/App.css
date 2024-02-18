@@ -1,0 +1,102 @@
+/* Overall layout */
+.container1 {
+    justify-content: center;
+    width: 70%; /* Reduce the width for a better view */
+    margin: 0 auto; /* center the container */
+  }
+
+  .cardsWrapper {
+    display: flex;          /* Make it a Flex container */
+    justify-content: space-between;  /* Spacing between two child cards */
+    gap: 20px;   /* In case you want some space between them */
+  }
+
+  /* Card 1 */
+  .card1 {
+    justify-self: center; /* center card 1 */
+  }
+
+  /* Card 2 */
+  .card2 {
+    flex: 1;
+    margin: 30px;
+  }
+
+  /* Card 3 */
+  .card3 {
+    margin: 30px;
+    flex: 1;
+  }
+
+  /* Styles for the form */
+  .form {
+    background-color: #e7d2e6;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30px;
+    font-size: 0.85rem;
+  }
+
+  .form-group {
+    margin: 15px;
+  }
+
+  .form-control {
+    margin: 20px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 0.75rem;
+  }
+
+  .form-control:focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none;
+  }
+
+  .button {
+    padding: 5px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #D268CC;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    font-size: 0.75rem;
+  }
+
+  .button:hover {
+    background-color: #8d4789;
+  }
+
+  .smallButton {
+    padding: 2px 10px;  /* Decreased padding */
+    font-size: 0.55rem;  /* Smaller font size */
+  }
+
+
+  .table {
+    width: 100%;  /* Ensure the table takes the full width of its container */
+    border-collapse: collapse;  /* Collapse table borders to remove any double borders */
+  }
+
+  .table thead th {
+    background-color: #f19cec;  /* Light background color for headers */
+    border: 1px solid #e0e0e0;  /* Light border for headers */
+    text-align: left;  /* Align text to the left */
+    padding: 8px 12px;  /* Moderate padding for headers */
+  }
+
+  .table tbody td {
+    background-color: #e7d2e6;
+    border: 1px solid #e0e0e0;  /* Light border for cells */
+    padding: 6px 10px;  /* Reduced padding to decrease cell height */
+    vertical-align: middle;  /* Center content vertically within the cell */
+  }
+
+  .table tbody tr:hover {
+    background-color: #f7f7f7;  /* Slight highlight on hover for rows */
+  }
