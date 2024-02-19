@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notelistapp-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: notelistapp
+  template:
+    metadata:
+      labels:
+        app: notelistapp
+    spec:
+      containers:
+      - name: notelistapp-container
+        image: delanekay/notelistapp:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
