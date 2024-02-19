@@ -41,7 +41,7 @@ Make sure you have the following installed and configured:
 
 ## Usage
 ### 1. Clone this repository:
-````js
+```js
 git clone https://github.com/DelaneKay/EKS-Terrafom-React
 cd EKS-Terrafom-React
 ```
