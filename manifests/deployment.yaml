@@ -15,6 +15,6 @@ spec:
       containers:
       - name: notelistapp-container
         image: delanekay/notelistapp:latest
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
