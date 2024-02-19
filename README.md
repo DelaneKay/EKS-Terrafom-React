@@ -92,7 +92,9 @@ kubectl get deployments
 ```
 
 To the get the external IP of the load-balancer where you will see the app do the following: 
+```js
 kubectl get service
+```
 
 ## Note
 - Make sure to configure `AWS credentials` properly before running `Terraform` commands.
