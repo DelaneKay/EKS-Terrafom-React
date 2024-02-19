@@ -41,43 +41,55 @@ Make sure you have the following installed and configured:
 
 ## Usage
 ### 1. Clone this repository:
-git clone <repository-url>
-cd <repository-folder>
+````js
+git clone https://github.com/DelaneKay/EKS-Terrafom-React
+cd EKS-Terrafom-React
+```
 
 ### 2. Set up Terraform remote backend:
+```js
 cd s3-files
 terraform init
 terraform validate
 terraform plan
 terraform apply
+```
 This will create an S3 bucket and a DynamoDB table for storing the Terraform state file.
 
 ### 3. Create Main Infrastructure
 Navigate to the root directory and run:
+```js
 terraform init
 terraform validate
 terraform plan
 terraform apply
+```
 This will create the VPC, subnets, internet gateway, NAT gateway, route table, the Bastion host and the EKS cluster.
 
 ### 4. Build and Push Docker Image
 Build the Docker image and push it to Dockerhub:
+```js
 docker build -t your-dockerhub-username/react-app:latest .
 docker push your-dockerhub-username/react-app:latest
+```
 
 ### 5. Deploy Web App to EKS Cluster
 Navigate to the manifest directory and apply the Kubernetes manifest files:
+```js
 cd manifests
 aws eks --region us-east-1 update-kubeconfig --name my-eks-cluster
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
+```
 This will create the deployment and a load balancer service for the React app.
 
 After completing these steps, your React app should be successfully deployed on the EKS cluster.
-Just to check if the nodes, pods and deployments are running in EKS cluster do the following: 
+Just to check if the nodes, pods and deployments are running in EKS cluster do the following:
+```js
 kubectl get nodes
 kubectl get pods
 kubectl get deployments
+```
 
 To the get the external IP of the load-balancer where you will see the app do the following: 
 kubectl get service
