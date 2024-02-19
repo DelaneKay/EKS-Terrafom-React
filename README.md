@@ -70,6 +70,7 @@ This will create the VPC, subnets, internet gateway, NAT gateway, route table, t
 Build the Docker image and push it to Dockerhub:
 ```js
 docker build -t your-dockerhub-username/react-app:latest .
+docker login
 docker push your-dockerhub-username/react-app:latest
 ```
 
