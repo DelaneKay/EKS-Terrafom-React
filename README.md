@@ -2,7 +2,8 @@
 
 This repository contains the necessary code and configurations to deploy a React app on an Amazon EKS cluster using Terraform for infrastructure provisioning and Kubernetes for orchestration.
 
-https://media.licdn.com/dms/image/D4D2DAQFuTbVui9p80Q/profile-treasury-image-shrink_1920_1920/0/1708372847530?e=1712055600&v=beta&t=-ijdvC0moQsK_iWyInT8Kw4ImwuN2GcmSXgf8PFLqM0
+![AWS Architectural Diagram]([https://openai.com/favicon.ico](https://media.licdn.com/dms/image/D4D2DAQFuTbVui9p80Q/profile-treasury-image-shrink_1920_1920/0/1708372847530?e=1712055600&v=beta&t=-ijdvC0moQsK_iWyInT8Kw4ImwuN2GcmSXgf8PFLqM0))
+
 
 ## Prerequisites
 Make sure you have the following installed and configured:
